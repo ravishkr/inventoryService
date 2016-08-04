@@ -6,7 +6,7 @@ client.on ('connect', function() {
 }); 
 
 client.set ("books_count","123",redis.print);
-client.set ("books_count",function (err,reply) {
+client.get ("books_count",function (err,reply) {
 	console.log('books_count = ' + reply.toString());
 });
 
